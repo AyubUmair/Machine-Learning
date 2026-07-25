@@ -1,6 +1,15 @@
+"""
+Logistic Regression Visualization
+
+This project visualizes the key concepts of Logistic Regression,
+including the sigmoid function, binary classification datasets,
+and decision boundaries in 1D, 2D, and 3D.
+
+Author: A. Umair
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
-
 
 x_train = np.array([0., 1, 2, 3, 4, 5])
 y_train = np.array([0,  0, 0, 1, 1, 1])
