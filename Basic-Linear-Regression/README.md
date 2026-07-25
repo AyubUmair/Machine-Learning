@@ -66,7 +66,7 @@ where
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/Linear-Regression-Visualizer.git
+git clone https://github.com/AyubUmair/Linear-Regression-Visualizer.git
 ```
 
 Move into the project directory:
