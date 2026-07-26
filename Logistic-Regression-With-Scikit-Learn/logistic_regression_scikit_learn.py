@@ -58,14 +58,6 @@ def main():
     plt.savefig("Logistic-Regression-With-Scikit-Learn/images/logistic_regression_probability_contours.png", dpi=300)
     plt.show()
 
-    w = lr_model.coef_[0]
-    b = lr_model.intercept_[0]
-
-    x_vals = np.linspace(x_min, x_max, 100)
-    y_vals = -(w[0] * x_vals + b) / w[1]
-
-    plt.plot(x_vals, y_vals, 'k-', linewidth=2, label="Decision Boundary")
-    plt.show()
 
 if __name__ == "__main__":
     main()
