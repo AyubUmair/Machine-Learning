@@ -25,8 +25,8 @@ def compute_cost(x:np.ndarray,
     cost = []
     for w in w_range:
         fw_x = w*x +b
-        gz = sigmoid(fw_x)
-        loss = np.sum((gz - y)**2) / (2*m)
+        probabilities = sigmoid(fw_x)
+        loss = np.sum((probabilities - y)**2) / (2*m)
         cost.append(loss)
     return np.array(cost)
 
@@ -36,9 +36,9 @@ def compute_logistic_cost(x,y,w_range,b):
     cost = []
     for w in w_range:
         fw_x = w * x + b
-        gz = sigmoid(fw_x)
-        gz = np.clip(gz, 1e-15, 1 - 1e-15)
-        loss = np.mean((-y*np.log(gz) - (1-y)*np.log(1-gz)))
+        probabilities = sigmoid(fw_x)
+        probabilities = np.clip(probabilities, 1e-15, 1 - 1e-15) # Prevent log(0), which would result in negative infinity
+        loss = np.mean((-y*np.log(probabilities) - (1-y)*np.log(1-probabilities)))
         cost.append(loss)
     return np.array(cost)
 
@@ -54,10 +54,10 @@ def compute_cost_grid(x, y, W, B):  # Computes the cost for a grid of weight and
             b = B[i, j]
 
             z = w * x + b
-            gz = sigmoid(z)
-            gz = np.clip(gz, 1e-15, 1 - 1e-15)  # To Avoid log(0)
+            probabilities = sigmoid(z)
+            probabilities = np.clip(probabilities, 1e-15, 1 - 1e-15)  # To Avoid log(0)
 
-            cost[i, j] = np.sum(-y * np.log(gz) - (1 - y) * np.log(1 - gz)) / m
+            cost[i, j] = np.sum(-y * np.log(probabilities) - (1 - y) * np.log(1 - probabilities)) / m
 
     return cost
 
@@ -69,6 +69,7 @@ def main():
     plt.grid(True)
     plt.xlabel('W values')
     plt.ylabel('Cost')
+    plt.title("Mean Squared Error Cost")
     plt.tight_layout()
     plt.savefig("Logistic-Regression-Loss-Functions/images/W vs MSE Cost.png",dpi = 300)
     plt.show()
@@ -79,6 +80,7 @@ def main():
     plt.grid(True)
     plt.xlabel('W values')
     plt.ylabel('Cost')
+    plt.title("Binary Cross Entropy Cost")
     plt.tight_layout()
     plt.savefig("Logistic-Regression-Loss-Functions/images/w vs Binary Cross Entropy Cost.png",dpi = 300)
     plt.show()

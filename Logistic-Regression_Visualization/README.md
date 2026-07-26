@@ -88,7 +88,7 @@ The program generates the following visualizations:
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/Machine-Learning.git
+git clone https://github.com/AyubUmair/Machine-Learning.git
 ```
 
 Navigate to the project folder:
@@ -178,7 +178,3 @@ Department of Electronic and Telecommunication Engineering
 University of Moratuwa
 
 ---
-
-## License
-
-This project is licensed under the MIT License.

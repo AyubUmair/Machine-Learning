@@ -12,7 +12,6 @@ University of Moratuwa
 import numpy as np
 import matplotlib.pyplot as plt
 import math
-import os
 
 x_train = np.array([1.0, 1.7, 2.0, 2.5, 3.0, 3.2])
 y_train = np.array([250, 300, 480,  430,   630, 730,])
