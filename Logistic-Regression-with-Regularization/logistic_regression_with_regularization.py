@@ -259,7 +259,7 @@ def admission_example():
     
 # Logistic Regression with Regularization
 def regularization_example():
-    
+
     print("Regularized Example")
 
     x_train = np.array([[ 0.051267,   0.69956  ],
