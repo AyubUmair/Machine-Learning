@@ -445,8 +445,8 @@ def main():
  plt.scatter(Xn_plot[pos_mask, 0], Xn_plot[pos_mask, 1], color='red', marker='x', s=100, label='Y=1')
  plt.scatter(Xn_plot[neg_mask, 0], Xn_plot[neg_mask, 1], color='blue', marker='o', s=100, label='Y=0')
  plt.title("Data Set")
- plt.xlabel('Temperature')
- plt.ylabel('Duration')
+ plt.xlabel('Normalized Temperature')
+ plt.ylabel('Normalized Duration')
  plt.savefig("Logistic-Regression-With-TensorFlow/images/ Normalized Coffee Roasting DataSet.png", dpi =300)
  plt.show()
 
