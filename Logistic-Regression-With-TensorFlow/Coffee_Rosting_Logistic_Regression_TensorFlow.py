@@ -430,7 +430,7 @@ def main():
  plt.title("Data Set")
  plt.xlabel('Temperature')
  plt.ylabel('Duration')
- plt.savefig("images/ Coffee Roasting DataSet.png", dpi =300)
+ plt.savefig("Logistic-Regression-With-TensorFlow/images/ Coffee Roasting DataSet.png", dpi =300)
  plt.show()
 
  # Normalizing Data
@@ -441,7 +441,14 @@ def main():
  norm_1.adapt(X_train)  # Learns Mean and Variance
  Xn = norm_1(X_train)
 
-
+ Xn_plot = Xn.numpy()
+ plt.scatter(Xn_plot[pos_mask, 0], Xn_plot[pos_mask, 1], color='red', marker='x', s=100, label='Y=1')
+ plt.scatter(Xn_plot[neg_mask, 0], Xn_plot[neg_mask, 1], color='blue', marker='o', s=100, label='Y=0')
+ plt.title("Data Set")
+ plt.xlabel('Temperature')
+ plt.ylabel('Duration')
+ plt.savefig("Logistic-Regression-With-TensorFlow/images/ Normalized Coffee Roasting DataSet.png", dpi =300)
+ plt.show()
 
  print(f"Max, Min post normalization of Temperature : {np.max(Xn[:, 0]):0.2f}, {np.min(Xn[:, 0]):0.2f}")
  print(f"Max, Min post normalization of Duration : {np.max(Xn[:, 1]):0.2f}, {np.min(Xn[:, 1]):0.2f}")
@@ -492,7 +499,7 @@ def main():
  plt.ylabel("Accuracy")
  plt.title("Training Accuracy")
  plt.grid(True)
- plt.savefig("images/ Training Accuracy.png", dpi = 300)
+ plt.savefig("Logistic-Regression-With-TensorFlow/images/ Training Accuracy.png", dpi = 300)
  plt.show()
 
  # After fitting, the weights have been updated:
