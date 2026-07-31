@@ -64,7 +64,7 @@ HandWritten-Digit-Recognition-With-Scikit-Learn/
 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/HandWritten-Digit-Recognition-With-Scikit-Learn.git
+git clone https://github.com/AyubUmair/HandWritten-Digit-Recognition-With-Scikit-Learn.git
 ```
 
 Navigate to the project directory
