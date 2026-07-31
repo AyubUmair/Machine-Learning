@@ -2,9 +2,10 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler 
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report
 
 df = pd.read_csv("HandWritten-Digitd-Recognition-With-Scikit-Learn/optdigits-orig.cv")
-print(df.head())
 print("Shape of DataSet: ", df.shape)
 
 def load_dataset(path,grid_height):
@@ -49,4 +50,15 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, random
 
 print("X_train Shape: ", X_train.shape)
 print("X_test Shape: ", X_test.shape)
+
+model = RandomForestClassifier(random_state=42)
+model.fit(X_train,y_train)
+
+y_prediction = model.predict(X_test)
+
+print("Model Accuracy: ", accuracy_score(y_test,y_prediction))
+print("\nClassification Report\n", classification_report(y_test, y_prediction))
+
+
+
 
