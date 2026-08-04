@@ -1,0 +1,48 @@
+# Virtual Environment
+.venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# TensorFlow / Keras files
+*.h5
+*.keras
+checkpoint/
+
+# Saved models
+saved_model/
+models/
+
+# Generated plots/images
+images/*.png
+images/*.jpg
+
+# Logs
+logs/
+*.log
+
+# TensorBoard files
+tensorboard/
+runs/
+
+# Environment variables
+.env
+
+# VS Code settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp

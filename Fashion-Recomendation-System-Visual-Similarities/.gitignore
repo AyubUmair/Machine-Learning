@@ -1,0 +1,77 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# ==========================
+# Jupyter Notebook
+# ==========================
+.ipynb_checkpoints/
+
+# ==========================
+# Machine Learning Files
+# ==========================
+# Large datasets
+*.csv
+*.zip
+*.tar
+*.gz
+dataset/
+datasets/
+data/
+
+# Trained models
+*.h5
+*.keras
+*.pb
+*.pkl
+*.joblib
+models/
+
+# Feature files
+*.npy
+*.npz
+
+# TensorFlow files
+checkpoint/
+logs/
+tensorboard/
+
+# ==========================
+# IDE / Editors
+# ==========================
+.vscode/
+.idea/
+
+# ==========================
+# OS Generated Files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Temporary Files
+# ==========================
+*.tmp
+*.log
+*.bak
+
+# ==========================
+# Environment Variables
+# ==========================
+.env
+
+# ==========================
+# Build / Cache
+# ==========================
+.cache/
+.pytest_cache/
+.mypy_cache/
